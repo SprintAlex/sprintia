@@ -1,0 +1,17 @@
+# SprintIA
+
+> Agence d'automatisation IA pour PME industrie et sous-traitance (France). Offre « Zéro Devis Perdu » : réponse automatique à chaque demande de devis en moins de 5 minutes, relances automatiques, tableau de bord. Objectif : ne plus perdre d'affaires faute de réactivité commerciale.
+
+## L'essentiel
+
+- Problème traité : un prospect industriel contacté en moins de 5 minutes a jusqu'à 21 fois plus de chances d'être qualifié (étude Lead Response Management). La plupart des PME répondent en plusieurs heures.
+- Solution : capture centralisée des demandes (site, email, téléphone), accusé de réception personnalisé < 5 min, séquences de relance automatiques, dashboard de suivi.
+- Garde-fou : validation humaine systématique — l'IA ne s'engage jamais sur un prix ni un délai technique.
+- Hébergement des données en France, conforme RGPD, option 100 % on-premise.
+- Processus : audit gratuit (15 min) → sprint d'installation < 15 jours → suivi et optimisation.
+
+## Pages
+
+- [Accueil](https://sprintalex.github.io/sprintia/) : offre complète, FAQ, réservation d'audit gratuit
+- [Mentions légales](https://sprintalex.github.io/sprintia/mentions-legales.html)
+- [Confidentialité](https://sprintalex.github.io/sprintia/confidentialite.html)

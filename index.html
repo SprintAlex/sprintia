@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#f5f5f6"/>
+<title>SprintIA · Agence IA pour les PME industrielles | Zéro devis perdu</title>
+<meta name="description" content="SprintIA, agence d'automatisation IA pour les PME industrie & sous-traitance. Réponse aux demandes de devis en moins de 5 minutes, relances automatiques, propositions commerciales. Audit offert."/>
+<link rel="canonical" href="https://sprintalex.github.io/sprintia/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="fr_FR"/>
+<meta property="og:site_name" content="SprintIA"/>
+<meta property="og:title" content="SprintIA · L'agence IA des PME industrielles"/>
+<meta property="og:description" content="On installe l'IA qui répond, relance et suit vos demandes de devis. Vous récupérez le chiffre d'affaires qui partait chez vos concurrents."/>
+<meta property="og:url" content="https://sprintalex.github.io/sprintia/"/>
+<meta property="og:image" content="https://sprintalex.github.io/sprintia/assets/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="SprintIA · L'agence IA des PME industrielles"/>
+<meta name="twitter:description" content="Réponse aux devis en moins de 5 minutes, relances automatiques, propositions commerciales. Audit offert."/>
+<meta name="twitter:image" content="https://sprintalex.github.io/sprintia/assets/og-image.png"/>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "name": "SprintIA",
+      "url": "https://sprintalex.github.io/sprintia/",
+      "description": "Agence d'automatisation IA pour les PME industrie & sous-traitance.",
+      "areaServed": "FR",
+      "founder": { "@type": "Person", "name": "Alexandre Maurel" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Baziège", "addressRegion": "Haute-Garonne", "addressCountry": "FR" }
+    },
+    {
+      "@type": "Service",
+      "name": "Zéro Devis Perdu",
+      "provider": { "@type": "Organization", "name": "SprintIA" },
+      "serviceType": "Automatisation de la réponse et de la relance des demandes de devis",
+      "areaServed": "FR",
+      "audience": { "@type": "BusinessAudience", "audienceType": "PME industrie & sous-traitance" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "L'IA répond-elle à mes clients à ma place ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. L'IA envoie un accusé de réception immédiat et qualifie la demande, mais ne s'engage jamais sur un prix ou un délai technique. Vous validez chaque devis." } },
+        { "@type": "Question", "name": "Mes devis sont techniques et sur-mesure, ça marche quand même ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Le système capte la demande, rassure le prospect en moins de 5 minutes et vous transmet toutes les infos pour chiffrer vite. Le travail technique reste le vôtre." } },
+        { "@type": "Question", "name": "C'est compliqué à mettre en place ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. On installe et paramètre tout en 10 jours ouvrés, branché sur vos outils existants, avec formation et 30 jours de support direct." } },
+        { "@type": "Question", "name": "Où sont hébergées mes données ?", "acceptedAnswer": { "@type": "Answer", "text": "En France, en conformité RGPD. Une option 100 % on-premise est disponible." } }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+/* Hallmark · macrostructure: agency one-pager (studied) · tone: corporate chaleureux · anchor hue: amber 90
+ * theme: studied-DNA (source: https://www.zenithia.pro/) · paper #F5F5F6 · ink #2D2D2F · accent #ECBC06 · navy #02015A
+ * fonts: Be Vietnam Pro (display + body) · nav: sticky bar + CTA · footer: statement CTA · studied: yes · DNA-source: url
+ * pre-emit critique: P4 H4 E4 S5 R4 V4
+ */
+:root {
+  --color-paper: oklch(97.2% 0.002 286);
+  --color-surface: oklch(100% 0 0);
+  --color-ink: oklch(29.5% 0.005 286);
+  --color-muted: oklch(50% 0.01 286);
+  --color-line: oklch(91% 0.004 286);
+  --color-accent: oklch(83% 0.17 90);
+  --color-accent-strong: oklch(72% 0.155 80);
+  --color-accent-soft: oklch(95% 0.06 95);
+  --color-accent-ink: oklch(47% 0.1 65);
+  --color-navy: oklch(22% 0.14 275);
+  --color-navy-2: oklch(30% 0.13 275);
+  --color-on-navy: oklch(98% 0.005 275);
+  --color-on-navy-muted: oklch(80% 0.03 275);
+  --color-focus: oklch(55% 0.2 265);
+  --font-display: "Be Vietnam Pro", system-ui, sans-serif;
+  --font-body: "Be Vietnam Pro", system-ui, sans-serif;
+  --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px;
+  --space-xl: 32px; --space-2xl: 48px; --space-3xl: 72px; --space-4xl: 112px;
+  --text-sm: 0.875rem; --text-base: 1rem; --text-lg: 1.125rem; --text-xl: 1.375rem;
+  --text-2xl: clamp(1.75rem, 1.2rem + 2vw, 2.5rem);
+  --text-display: clamp(2.3rem, 1.3rem + 4.2vw, 4.1rem);
+  --radius-sm: 10px; --radius-md: 16px; --radius-lg: 24px; --radius-pill: 999px;
+  --shadow-card: 0 1px 2px oklch(29.5% 0.005 286 / 0.06), 0 8px 24px oklch(29.5% 0.005 286 / 0.06);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in: cubic-bezier(0.55, 0, 1, 0.45);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 150ms; --dur-base: 250ms; --dur-slow: 600ms;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body { margin: 0; background: var(--color-paper); color: var(--color-ink); font-family: var(--font-body); font-size: var(--text-base); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4 { font-family: var(--font-display); font-style: normal; line-height: 1.15; margin: 0; letter-spacing: -0.02em; overflow-wrap: anywhere; min-width: 0; }
+p { margin: 0; }
+a { color: inherit; }
+img, svg { display: block; max-width: 100%; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; border-radius: 6px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.skip { position: absolute; left: var(--space-md); top: -60px; z-index: 60; background: var(--color-ink); color: var(--color-surface); padding: var(--space-xs) var(--space-md); border-radius: var(--radius-sm); }
+.skip:focus { top: var(--space-md); }
+.wrap { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 var(--space-md); }
+@media (min-width: 768px) { .wrap { padding: 0 var(--space-xl); } }
+.icon { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+
+/* marker highlight: one word per heading, ZénithIA DNA, ink stays readable */
+.hl { background: linear-gradient(transparent 58%, var(--color-accent) 58%, var(--color-accent) 92%, transparent 92%); padding: 0 0.08em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.on-navy .hl { background: none; color: var(--color-accent); padding: 0; }
+
+/* buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-xs); white-space: nowrap; font: 600 var(--text-base)/1 var(--font-body); text-decoration: none; border: 1.5px solid transparent; border-radius: var(--radius-pill); padding: 15px 26px; cursor: pointer; transition: background-color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out); }
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: 0.55; cursor: not-allowed; }
+.btn-primary { background: var(--color-accent); color: var(--color-ink); }
+.btn-primary:hover { background: var(--color-accent-strong); }
+.btn-ghost { background: transparent; color: var(--color-ink); border-color: var(--color-line); }
+.btn-ghost:hover { border-color: var(--color-ink); }
+.btn-dark { background: var(--color-ink); color: var(--color-surface); }
+.btn-dark:hover { background: var(--color-navy); }
+.btn-sm { padding: 11px 18px; font-size: var(--text-sm); }
+.btn .icon { width: 18px; height: 18px; }
+
+/* nav */
+.nav { position: sticky; top: 0; z-index: 40; background: oklch(97.2% 0.002 286 / 0.88); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--color-line); }
+.nav-in { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); height: 72px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.2rem; text-decoration: none; letter-spacing: -0.02em; white-space: nowrap; }
+.brand svg { width: 26px; height: 26px; }
+.brand b { color: var(--color-accent-ink); font-weight: 700; }
+.nav-links { display: none; gap: var(--space-xl); list-style: none; margin: 0; padding: 0; }
+.nav-links a { text-decoration: none; font-weight: 500; font-size: var(--text-sm); color: var(--color-muted); white-space: nowrap; transition: color var(--dur-fast) var(--ease-out); }
+.nav-links a:hover { color: var(--color-ink); }
+.nav-cta { display: flex; align-items: center; gap: var(--space-xs); }
+.burger { display: inline-flex; background: none; border: 0; padding: var(--space-xs); cursor: pointer; color: var(--color-ink); }
+.mobile-menu { border-top: 1px solid var(--color-line); padding: var(--space-md) 0 var(--space-lg); }
+.mobile-menu a { display: block; padding: var(--space-sm) 0; font-weight: 500; text-decoration: none; white-space: nowrap; }
+.hidden { display: none !important; }
+@media (min-width: 900px) { .nav-links { display: flex; } .burger, .mobile-menu { display: none !important; } }
+@media (max-width: 420px) { .nav-cta .btn-sm { padding: 10px 14px; } }
+
+/* sections */
+section { padding: var(--space-3xl) 0; }
+@media (min-width: 768px) { section { padding: var(--space-4xl) 0; } }
+.head { max-width: 720px; margin: 0 auto var(--space-2xl); text-align: center; }
+.head h2 { font-size: var(--text-2xl); font-weight: 700; }
+.head p { margin-top: var(--space-md); color: var(--color-muted); font-size: var(--text-lg); }
+.tag { display: inline-flex; align-items: center; gap: 6px; font-size: var(--text-sm); font-weight: 600; color: var(--color-accent-ink); background: var(--color-accent-soft); border-radius: var(--radius-pill); padding: 6px 14px; margin-bottom: var(--space-md); white-space: nowrap; }
+.hero .tag { white-space: normal; }
+@media (max-width: 359px) { .btn { padding: 14px 18px; font-size: 0.9375rem; } }
+.card { background: var(--color-surface); border: 1px solid var(--color-line); border-radius: var(--radius-md); box-shadow: var(--shadow-card); }
+
+/* hero */
+.hero { padding: var(--space-3xl) 0 var(--space-3xl); }
+.hero-grid { display: grid; gap: var(--space-2xl); align-items: center; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 980px) { .hero-grid { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: var(--space-3xl); } .hero { padding: var(--space-4xl) 0; } }
+.hero h1 { font-size: var(--text-display); font-weight: 700; letter-spacing: -0.035em; line-height: 1.06; }
+.hero .lead { margin-top: var(--space-lg); font-size: var(--text-lg); color: var(--color-muted); max-width: 560px; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-xl); }
+.reassure { margin-top: var(--space-md); font-size: var(--text-sm); color: var(--color-muted); display: flex; align-items: center; gap: 6px; }
+.reassure .icon { width: 16px; height: 16px; color: var(--color-accent-ink); }
+
+/* hero visual: flow of one quote request */
+.flow { padding: var(--space-lg); position: relative; }
+.flow-top { display: flex; justify-content: space-between; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-lg); }
+.flow-top strong { font-size: var(--text-base); }
+.flow-top span { font-size: 12px; color: var(--color-muted); white-space: nowrap; }
+.flow ol { list-style: none; margin: 0; padding: 0; position: relative; }
+.flow ol::before { content: ""; position: absolute; left: 17px; top: 18px; bottom: 18px; width: 2px; background: var(--color-line); }
+.flow li { position: relative; display: grid; grid-template-columns: 36px minmax(0, 1fr) auto; gap: var(--space-sm); align-items: center; padding: var(--space-sm) 0; }
+.flow .dot { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--color-paper); border: 1px solid var(--color-line); color: var(--color-muted); position: relative; }
+.flow .dot .icon { width: 17px; height: 17px; }
+.flow li.done .dot { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-ink); }
+.flow li.win .dot { background: var(--color-navy); border-color: var(--color-navy); color: var(--color-accent); }
+.flow .t { font-size: var(--text-sm); font-weight: 600; }
+.flow .s { font-size: 12px; color: var(--color-muted); }
+.flow time { font-size: 12px; font-weight: 600; color: var(--color-muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.flow-foot { margin-top: var(--space-md); padding-top: var(--space-md); border-top: 1px dashed var(--color-line); display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-sm); }
+.flow-foot span { font-size: 12px; color: var(--color-muted); }
+.flow-foot b { font-size: 1.6rem; letter-spacing: -0.02em; }
+.flow-note { margin-top: var(--space-sm); font-size: 11px; color: var(--color-muted); text-align: right; }
+
+/* trust strip */
+.trust { padding: var(--space-lg) 0; border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); background: var(--color-surface); }
+.trust ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-md) var(--space-lg); }
+@media (min-width: 900px) { .trust ul { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.trust li { display: flex; align-items: center; gap: var(--space-sm); font-size: var(--text-sm); font-weight: 500; }
+.trust .icon { color: var(--color-accent-ink); }
+
+/* services */
+.services { display: grid; gap: var(--space-lg); grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .services { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.svc { padding: var(--space-xl); display: flex; flex-direction: column; gap: var(--space-md); transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out); }
+.svc:hover { transform: translateY(-3px); }
+.svc .ico { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; background: var(--color-accent-soft); color: var(--color-accent-ink); }
+.svc .ico .icon { width: 26px; height: 26px; }
+.svc h3 { font-size: var(--text-xl); font-weight: 700; }
+.svc p { color: var(--color-muted); }
+.svc ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-xs); font-size: var(--text-sm); }
+.svc li { display: flex; gap: var(--space-xs); align-items: flex-start; }
+.svc li .icon { width: 18px; height: 18px; color: var(--color-accent-ink); margin-top: 2px; }
+.svc .btn { margin-top: auto; align-self: flex-start; }
+.svc.featured { background: var(--color-navy); border-color: var(--color-navy); color: var(--color-on-navy); }
+.svc.featured p { color: var(--color-on-navy-muted); }
+.svc.featured .ico { background: var(--color-navy-2); color: var(--color-accent); }
+.svc.featured li .icon { color: var(--color-accent); }
+.svc .badge { align-self: flex-start; font-size: 12px; font-weight: 600; background: var(--color-accent); color: var(--color-ink); border-radius: var(--radius-pill); padding: 4px 12px; white-space: nowrap; }
+
+/* ZDP detail */
+.zdp { display: grid; gap: var(--space-2xl); grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 980px) { .zdp { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: var(--space-3xl); } }
+.zdp-intro h2 { font-size: var(--text-2xl); font-weight: 700; }
+.zdp-intro p { margin-top: var(--space-md); color: var(--color-muted); font-size: var(--text-lg); }
+.zdp-intro .human { margin-top: var(--space-lg); display: flex; gap: var(--space-sm); padding: var(--space-md); border-radius: var(--radius-sm); background: var(--color-accent-soft); font-size: var(--text-sm); font-weight: 500; }
+.zdp-intro .human .icon { color: var(--color-accent-ink); }
+.feats { display: grid; gap: var(--space-md); grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 640px) { .feats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.feat { padding: var(--space-lg); }
+.feat .icon { color: var(--color-accent-ink); width: 26px; height: 26px; margin-bottom: var(--space-sm); }
+.feat h3 { font-size: var(--text-lg); font-weight: 600; margin-bottom: var(--space-xs); }
+.feat p { font-size: var(--text-sm); color: var(--color-muted); }
+.feat.bonus { background: var(--color-paper); box-shadow: none; border-style: dashed; }
+.feat .kicker { display: block; font-size: 12px; font-weight: 600; color: var(--color-accent-ink); margin-bottom: 4px; }
+
+/* ROI band */
+.roi { background: var(--color-navy); color: var(--color-on-navy); border-radius: var(--radius-lg); padding: var(--space-2xl) var(--space-lg); }
+@media (min-width: 768px) { .roi { padding: var(--space-3xl); } }
+.roi h2 { font-size: var(--text-2xl); font-weight: 700; max-width: 720px; }
+.roi > p { margin-top: var(--space-sm); color: var(--color-on-navy-muted); }
+.roi-grid { display: grid; gap: var(--space-md); margin-top: var(--space-2xl); grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 768px) { .roi-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(0, 1.3fr); align-items: stretch; } }
+.roi-cell { border: 1px solid var(--color-navy-2); border-radius: var(--radius-md); padding: var(--space-lg); }
+.roi-cell b { display: block; font-size: 1.9rem; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.roi-cell span { font-size: var(--text-sm); color: var(--color-on-navy-muted); }
+.roi-cell.total { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-ink); }
+.roi-cell.total span { color: var(--color-ink); }
+.roi-cell.total b { font-size: 2.4rem; }
+.roi-foot { margin-top: var(--space-xl); display: flex; flex-wrap: wrap; gap: var(--space-lg); align-items: center; justify-content: space-between; }
+.roi-foot p { color: var(--color-on-navy-muted); max-width: 560px; }
+
+/* why */
+.why { display: grid; gap: var(--space-lg); grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .why { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.why-item { padding: var(--space-xl); }
+.why-item .num { width: 44px; height: 44px; border-radius: 12px; background: var(--color-accent); display: grid; place-items: center; margin-bottom: var(--space-lg); }
+.why-item .num .icon { width: 22px; height: 22px; color: var(--color-ink); }
+.why-item h3 { font-size: var(--text-xl); font-weight: 700; margin-bottom: var(--space-sm); }
+.why-item p { color: var(--color-muted); }
+
+/* method */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-md); grid-template-columns: minmax(0, 1fr); counter-reset: step; }
+@media (min-width: 640px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .steps { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.step-card { padding: var(--space-lg); position: relative; }
+.step-card .when { display: inline-block; font-size: 12px; font-weight: 600; color: var(--color-accent-ink); background: var(--color-accent-soft); border-radius: var(--radius-pill); padding: 4px 12px; margin-bottom: var(--space-md); white-space: nowrap; }
+.step-card h3 { font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-xs); }
+.step-card p { font-size: var(--text-sm); color: var(--color-muted); }
+
+/* guarantee */
+.guarantee { display: grid; gap: var(--space-xl); grid-template-columns: minmax(0, 1fr); padding: var(--space-xl); align-items: center; }
+@media (min-width: 900px) { .guarantee { grid-template-columns: auto minmax(0, 1fr); padding: var(--space-2xl); gap: var(--space-2xl); } }
+.seal { width: 96px; height: 96px; border-radius: 50%; background: var(--color-accent); display: grid; place-items: center; }
+.seal .icon { width: 44px; height: 44px; color: var(--color-ink); }
+.guarantee h2 { font-size: var(--text-2xl); font-weight: 700; }
+.guarantee p { margin-top: var(--space-sm); color: var(--color-muted); }
+.guarantee ul { list-style: none; margin: var(--space-lg) 0 0; padding: 0; display: grid; gap: var(--space-xs); font-size: var(--text-sm); }
+.guarantee li { display: flex; gap: var(--space-xs); }
+.guarantee li .icon { width: 18px; height: 18px; color: var(--color-accent-ink); margin-top: 2px; }
+
+/* founder */
+.founder { display: grid; gap: var(--space-2xl); grid-template-columns: minmax(0, 1fr); align-items: center; }
+@media (min-width: 900px) { .founder { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: var(--space-3xl); } }
+.portrait { aspect-ratio: 4 / 5; max-width: 380px; width: 100%; margin: 0 auto; border-radius: var(--radius-lg); background: var(--color-navy); color: var(--color-accent); display: grid; place-items: center; font-size: 5rem; font-weight: 700; letter-spacing: -0.04em; position: relative; overflow: hidden; }
+.portrait::after { content: ""; position: absolute; inset: auto -20% -30% auto; width: 70%; aspect-ratio: 1; border-radius: 50%; border: 18px solid var(--color-navy-2); }
+.founder h2 { font-size: var(--text-2xl); font-weight: 700; }
+.founder .role { margin-top: var(--space-xs); font-weight: 600; color: var(--color-accent-ink); }
+.founder p.bio { margin-top: var(--space-lg); color: var(--color-muted); font-size: var(--text-lg); }
+.creds { list-style: none; margin: var(--space-xl) 0 0; padding: 0; display: grid; gap: var(--space-sm); }
+.creds li { display: flex; gap: var(--space-sm); align-items: flex-start; }
+.creds .icon { color: var(--color-accent-ink); margin-top: 2px; }
+
+/* faq */
+.faq { max-width: 820px; margin: 0 auto; display: grid; gap: var(--space-sm); }
+.faq details { padding: 0 var(--space-lg); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: var(--space-md); padding: var(--space-lg) 0; font-weight: 600; font-size: var(--text-lg); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary .icon { transition: transform var(--dur-base) var(--ease-out); color: var(--color-accent-ink); }
+.faq details[open] summary .icon { transform: rotate(45deg); }
+.faq details p { padding-bottom: var(--space-lg); color: var(--color-muted); }
+
+/* final cta + footer */
+.final { background: var(--color-navy); color: var(--color-on-navy); text-align: center; padding: var(--space-4xl) 0; }
+.final h2 { font-size: var(--text-display); font-weight: 700; letter-spacing: -0.035em; max-width: 820px; margin: 0 auto; }
+.final p { margin: var(--space-lg) auto 0; color: var(--color-on-navy-muted); font-size: var(--text-lg); max-width: 560px; }
+.final .btn { margin-top: var(--space-xl); }
+footer { background: var(--color-navy); color: var(--color-on-navy-muted); border-top: 1px solid var(--color-navy-2); padding: var(--space-2xl) 0; font-size: var(--text-sm); }
+.foot { display: grid; gap: var(--space-xl); grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 768px) { .foot { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1fr); } }
+.foot .brand { color: var(--color-on-navy); margin-bottom: var(--space-sm); }
+.foot .brand b { color: var(--color-accent); }
+.foot h3 { font-size: var(--text-sm); color: var(--color-on-navy); margin-bottom: var(--space-sm); }
+.foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-xs); }
+.foot a { text-decoration: none; white-space: nowrap; }
+.foot a:hover { color: var(--color-on-navy); }
+.legal { margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: 1px solid var(--color-navy-2); font-size: 12px; }
+
+/* reveal */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out); }
+.reveal.in { opacity: 1; transform: none; }
+.no-js .reveal { opacity: 1; transform: none; }
+
+/* modal */
+.modal { position: fixed; inset: 0; z-index: 50; display: flex; align-items: center; justify-content: center; padding: var(--space-md); }
+.modal.modal-hidden { display: none; }
+.modal-backdrop { position: absolute; inset: 0; background: oklch(22% 0.14 275 / 0.6); backdrop-filter: blur(4px); }
+.modal-panel { position: relative; width: 100%; max-width: 520px; max-height: calc(100dvh - 32px); overflow-y: auto; background: var(--color-surface); border-radius: var(--radius-lg); box-shadow: 0 24px 64px oklch(22% 0.14 275 / 0.3); }
+.progress { height: 4px; background: var(--color-line); }
+#modal-progress { height: 100%; background: var(--color-accent); transition: width var(--dur-base) var(--ease-out); }
+.modal-top { display: flex; justify-content: space-between; align-items: center; padding: var(--space-md) var(--space-lg) 0; }
+.modal-top button { background: none; border: 0; cursor: pointer; color: var(--color-muted); display: inline-flex; align-items: center; gap: 4px; font: 500 var(--text-sm) var(--font-body); padding: 6px; }
+.modal-top button:hover { color: var(--color-ink); }
+.invisible { visibility: hidden; }
+#modal-step-label { font-size: 12px; font-weight: 600; color: var(--color-muted); }
+#lead-form { padding: var(--space-lg); }
+@media (min-width: 640px) { #lead-form { padding: var(--space-lg) var(--space-xl) var(--space-xl); } }
+.step { display: none; border: 0; margin: 0; padding: 0; min-width: 0; }
+.step.active { display: block; }
+.step legend, .step h3 { font-size: var(--text-xl); font-weight: 700; text-align: center; width: 100%; margin-bottom: var(--space-lg); padding: 0; }
+.opts { display: grid; gap: var(--space-sm); }
+.opt { display: flex; align-items: center; gap: var(--space-sm); padding: var(--space-md); border: 1.5px solid var(--color-line); border-radius: var(--radius-sm); cursor: pointer; font-weight: 500; transition: border-color var(--dur-fast) var(--ease-out), background-color var(--dur-fast) var(--ease-out); }
+.opt:hover { border-color: var(--color-accent-strong); }
+.opt:has(input:checked) { border-color: var(--color-accent-strong); background: var(--color-accent-soft); }
+.opt input { width: 18px; height: 18px; accent-color: var(--color-accent-ink); }
+.lbl { display: block; font-size: 12px; font-weight: 600; color: var(--color-muted); margin-bottom: var(--space-xs); }
+.chips { display: flex; flex-wrap: wrap; gap: var(--space-xs); margin-bottom: var(--space-lg); }
+.chip { font: 500 var(--text-sm) var(--font-body); padding: 9px 16px; border: 1.5px solid var(--color-line); border-radius: var(--radius-pill); background: var(--color-surface); color: var(--color-ink); cursor: pointer; white-space: nowrap; transition: border-color var(--dur-fast) var(--ease-out), background-color var(--dur-fast) var(--ease-out); }
+.chip:hover { border-color: var(--color-accent-strong); }
+.chip.selected { border-color: var(--color-accent-strong); background: var(--color-accent-soft); }
+.field { width: 100%; font: 400 var(--text-base) var(--font-body); color: var(--color-ink); background: var(--color-paper); border: 1.5px solid var(--color-line); border-radius: var(--radius-sm); padding: 13px 14px; margin-bottom: var(--space-md); }
+.field:focus { outline: none; border-color: var(--color-focus); }
+.field:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 1px; }
+.hint { text-align: center; color: var(--color-muted); font-size: var(--text-sm); margin: calc(var(--space-md) * -1) 0 var(--space-lg); }
+#modal-actions { margin-top: var(--space-xl); }
+#modal-next { width: 100%; }
+.success-ico { width: 64px; height: 64px; margin: 0 auto var(--space-lg); border-radius: 50%; background: var(--color-accent); display: grid; place-items: center; }
+.success-ico .icon { width: 30px; height: 30px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { transform: none; transition: opacity var(--dur-fast) linear; }
+  .svc:hover { transform: none; }
+  * { transition-duration: 1ms !important; }
+}
+</style>
+</head>
+<body class="no-js">
+<a href="#top" class="skip">Aller au contenu</a>
+
+<svg hidden aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-arrow-forward" viewBox="0 0 24 24"><path d="M5 12h14m0 0l-6-6m6 6l-6 6"/></symbol>
+<symbol id="i-arrow-back" viewBox="0 0 24 24"><path d="M19 12H5m0 0l6-6m-6 6l6 6"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4.5 12.5H11L9.5 22 19 10.5h-6.5L13 2Z"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+<symbol id="i-cog" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"/></symbol>
+<symbol id="i-inbox" viewBox="0 0 24 24"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.5 5.1 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.5-6.9A2 2 0 0 0 16.7 4H7.3a2 2 0 0 0-1.8 1.1Z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></symbol>
+<symbol id="i-history" viewBox="0 0 24 24"><path d="M3 3v6h6"/><path d="M3.05 13A9 9 0 1 0 6 5.3L3 9"/><path d="M12 7v5l4 2"/></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+<symbol id="i-factory" viewBox="0 0 24 24"><path d="M2 20V9l6 4V9l6 4V4h4l2 16Z"/><path d="M2 20h20"/></symbol>
+<symbol id="i-euro" viewBox="0 0 24 24"><path d="M18 6.5A7 7 0 1 0 18 17.5"/><path d="M4 10h10M4 14h10"/></symbol>
+<symbol id="i-hand" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v6M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.4l-3.6-3.6a2 2 0 0 1 2.8-2.8L7 15"/></symbol>
+<symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="M9 12l2 2 4-4"/></symbol>
+<symbol id="i-server" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></symbol>
+<symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 22V4a1 1 0 0 1 1-1h12l-2 4 2 4H5"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></symbol>
+<symbol id="i-logo" viewBox="0 0 512 512"><polygon fill="currentColor" stroke="none" points="160,64 448,64 448,160 160,160 160,208 448,208 448,352 352,448 64,448 64,352 352,352 352,304 64,304 64,160"/></symbol>
+</defs>
+</svg>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="SprintIA, accueil"><svg aria-hidden="true"><use href="#i-logo"/></svg><span>Sprint<b>IA</b></span></a>
+    <nav aria-label="Navigation principale">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#methode">Méthode</a></li>
+        <li><a href="#fondateur">Fondateur</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <button type="button" class="btn btn-primary btn-sm" data-open-modal>Audit gratuit</button>
+      <button type="button" id="burger" class="burger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg id="burger-open-icon" class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg id="burger-close-icon" class="icon hidden" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="mobile-menu hidden">
+    <nav class="wrap" aria-label="Navigation mobile">
+      <a href="#services">Services</a>
+      <a href="#methode">Méthode</a>
+      <a href="#fondateur">Fondateur</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="tag"><svg class="icon" aria-hidden="true" style="width:16px;height:16px"><use href="#i-factory"/></svg>Agence IA · PME industrie &amp; sous-traitance</span>
+      <h1>L'IA qui fait signer <span class="hl">plus de devis</span> à votre PME industrielle.</h1>
+      <p class="lead">On installe des systèmes d'IA qui répondent, relancent et suivent chacune de vos demandes de devis. Vous récupérez le chiffre d'affaires qui partait chez vos concurrents pendant que vous étiez à l'atelier.</p>
+      <div class="hero-ctas">
+        <button type="button" class="btn btn-primary" data-open-modal>Réserver mon audit gratuit <svg class="icon" aria-hidden="true"><use href="#i-arrow-forward"/></svg></button>
+        <a class="btn btn-ghost" href="#services">Voir nos services</a>
+      </div>
+      <p class="reassure"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Audit offert, sans engagement. Vous repartez avec votre chiffre.</p>
+    </div>
+
+    <figure class="card flow reveal" aria-label="Exemple de parcours d'une demande de devis avec SprintIA" style="margin:0">
+      <div class="flow-top"><strong>Demande de devis · pièce usinée</strong><span>Mardi</span></div>
+      <ol>
+        <li class="done"><span class="dot"><svg class="icon" aria-hidden="true"><use href="#i-inbox"/></svg></span><div><div class="t">Demande reçue via votre site</div><div class="s">Plan joint, quantité, délai</div></div><time>09:12</time></li>
+        <li class="done"><span class="dot"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span><div><div class="t">Réponse personnalisée envoyée</div><div class="s">Qualifiée, transmise à votre chiffreur</div></div><time>09:14</time></li>
+        <li class="done"><span class="dot"><svg class="icon" aria-hidden="true"><use href="#i-refresh"/></svg></span><div><div class="t">Relance automatique</div><div class="s">Devis envoyé, pas de retour client</div></div><time>J+3</time></li>
+        <li class="win"><span class="dot"><svg class="icon" aria-hidden="true"><use href="#i-flag"/></svg></span><div><div class="t">RDV de validation pris</div><div class="s">Vous n'avez rien eu à relancer</div></div><time>J+5</time></li>
+      </ol>
+      <div class="flow-foot"><span>Délai de première réponse</span><b>2 min</b></div>
+      <figcaption class="flow-note">Exemple de parcours type</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="wrap">
+    <ul>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-flag"/></svg>Hébergement en France</li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-shield-check"/></svg>Conforme RGPD</li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-hand"/></svg>Validation humaine à chaque étape</li>
+      <li><svg class="icon" aria-hidden="true"><use href="#i-server"/></svg>Option 100 % on-premise</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>L'IA au service de <span class="hl">votre carnet de commandes</span></h2>
+      <p>Pas de « transformation digitale » abstraite. On automatise ce qui vous fait perdre des affaires : les demandes qui attendent, les devis qu'on oublie de relancer, les propositions qui prennent une demi-journée.</p>
+    </div>
+    <div class="services">
+      <article class="card svc reveal">
+        <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg></div>
+        <h3>Audit IA</h3>
+        <p>On cartographie votre parcours de devis, de la demande entrante à la signature, et on chiffre en euros ce qui vous échappe chaque mois.</p>
+        <ul>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Cartographie de vos flux de demandes</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Estimation du CA récupérable</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Offert et sans engagement</li>
+        </ul>
+        <button type="button" class="btn btn-dark btn-sm" data-open-modal>Réserver l'audit</button>
+      </article>
+      <article class="card svc featured reveal">
+        <span class="badge">Offre phare</span>
+        <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg></div>
+        <h3>Zéro Devis Perdu</h3>
+        <p>Chaque demande de devis reçoit une réponse en moins de 5 minutes, est qualifiée, puis relancée jusqu'à la décision. Installé en 10 jours ouvrés.</p>
+        <ul>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Capture de toutes vos sources de leads</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Relances automatiques multi-canaux</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Tableau de bord de vos devis</li>
+        </ul>
+        <a class="btn btn-primary btn-sm" href="#zero-devis-perdu">Découvrir l'offre</a>
+      </article>
+      <article class="card svc reveal">
+        <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-cog"/></svg></div>
+        <h3>Automatisations sur mesure</h3>
+        <p>Les tâches répétitives de votre équipe commerciale, prises en charge par l'IA, branchées sur vos outils actuels, avec une formation pour votre équipe.</p>
+        <ul>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Propositions commerciales générées</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Assistant sur vos documents techniques</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Suivi, maintenance et reporting</li>
+        </ul>
+        <button type="button" class="btn btn-dark btn-sm" data-open-modal>En parler</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ZDP DETAIL -->
+<section id="zero-devis-perdu" style="padding-top:0">
+  <div class="wrap zdp">
+    <div class="zdp-intro reveal">
+      <span class="tag">Offre phare</span>
+      <h2>Zéro Devis Perdu : votre machine à <span class="hl">ne plus rater une affaire</span></h2>
+      <p>Dans l'industrie, la réactivité est devenue le premier critère de choix d'un fournisseur. Le système répond pour vous en quelques minutes, puis suit chaque devis jusqu'à la décision.</p>
+      <div class="human"><svg class="icon" aria-hidden="true"><use href="#i-hand"/></svg><span>L'IA ne s'engage jamais sur un prix ou un délai à votre place. Vous validez chaque devis.</span></div>
+    </div>
+    <div class="feats">
+      <div class="card feat reveal"><svg class="icon" aria-hidden="true"><use href="#i-inbox"/></svg><h3>Capture instantanée</h3><p>Site web, email, téléphone : toutes vos demandes arrivent dans une interface unique.</p></div>
+      <div class="card feat reveal"><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg><h3>Réponse en moins de 5 min</h3><p>Accusé de réception personnalisé et qualification automatique, même quand vous êtes à l'atelier.</p></div>
+      <div class="card feat reveal"><svg class="icon" aria-hidden="true"><use href="#i-refresh"/></svg><h3>Relances automatiques</h3><p>Séquences de suivi calées sur le comportement du prospect, sans intervention manuelle.</p></div>
+      <div class="card feat reveal"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg><h3>Tableau de bord</h3><p>Devis en cours, relances, taux de transformation : votre pipeline lisible d'un coup d'œil.</p></div>
+      <div class="card feat bonus reveal"><span class="kicker">Inclus</span><h3>Réveil des devis dormants</h3><p>On relance vos anciennes demandes restées sans réponse. Du chiffre d'affaires déjà dans vos tiroirs.</p></div>
+      <div class="card feat bonus reveal"><span class="kicker">Inclus</span><h3>Rapport mensuel</h3><p>Leads captés, RDV pris, devis relancés, affaires signées : ce que le système vous rapporte, noir sur blanc.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ROI -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="roi on-navy reveal">
+      <h2>Combien vous coûtent, <span class="hl">en euros</span>, les devis que vous ne signez pas ?</h2>
+      <p>Exemple d'un atelier de sous-traitance moyen. L'audit calcule vos propres chiffres.</p>
+      <div class="roi-grid">
+        <div class="roi-cell"><b>25</b><span>demandes de devis par mois</span></div>
+        <div class="roi-cell"><b>6 000 €</b><span>panier moyen par affaire</span></div>
+        <div class="roi-cell"><b>1 sur 5</b><span>perdue faute de réponse rapide</span></div>
+        <div class="roi-cell total"><span>Ce qui part chez vos concurrents, chaque mois</span><b>30 000 €</b></div>
+      </div>
+      <div class="roi-foot">
+        <p>Un seul devis récupéré par mois rembourse l'installation. Le reste, c'est du chiffre d'affaires en plus.</p>
+        <button type="button" class="btn btn-primary" data-open-modal>Calculer mon manque à gagner</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>Pourquoi choisir <span class="hl">SprintIA</span></h2>
+    </div>
+    <div class="why">
+      <div class="card why-item reveal"><div class="num"><svg class="icon" aria-hidden="true"><use href="#i-factory"/></svg></div><h3>Spécialiste de l'industrie</h3><p>On parle devis, plans, délais et chiffrage, pas jargon marketing. Le système est calé sur votre métier et votre façon de répondre.</p></div>
+      <div class="card why-item reveal"><div class="num"><svg class="icon" aria-hidden="true"><use href="#i-euro"/></svg></div><h3>Des résultats en euros</h3><p>On mesure ce qui compte pour vous : les devis récupérés et le chiffre d'affaires signé. Chaque mois, un rapport clair.</p></div>
+      <div class="card why-item reveal"><div class="num"><svg class="icon" aria-hidden="true"><use href="#i-shield-check"/></svg></div><h3>Vous gardez la main</h3><p>Validation humaine à chaque étape, hébergement en France, documentation de passation. Vous n'êtes jamais captif.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section id="methode" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>De l'audit au système en marche : <span class="hl">10 jours ouvrés</span></h2>
+      <p>Pas de phase de cadrage à rallonge. Un calendrier daté, des jalons que vous pouvez vérifier.</p>
+    </div>
+    <ol class="steps">
+      <li class="card step-card reveal"><span class="when">Jour 0</span><h3>Audit offert</h3><p>On chiffre ensemble le montant de devis que vous laissez filer chaque mois. Vous repartez avec le chiffre, même si on ne travaille pas ensemble.</p></li>
+      <li class="card step-card reveal"><span class="when">Jours 1 à 6</span><h3>Installation</h3><p>Capture des leads, relances et suivi branchés sur vos outils actuels. Vous n'avez rien à faire pendant cette phase.</p></li>
+      <li class="card step-card reveal"><span class="when">Jours 7 à 8</span><h3>Tests réels</h3><p>On passe de vraies demandes dans le système, devant vous. Rien ne part chez un client sans votre validation.</p></li>
+      <li class="card step-card reveal"><span class="when">Jours 9 à 10</span><h3>Mise en service</h3><p>Formation de votre équipe, documentation remise. Puis 30 jours de support direct, sans ticket.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section id="garantie" style="padding-top:0">
+  <div class="wrap">
+    <div class="card guarantee reveal">
+      <div class="seal"><svg class="icon" aria-hidden="true"><use href="#i-shield-check"/></svg></div>
+      <div>
+        <h2>Le risque est pour nous, <span class="hl">pas pour vous</span></h2>
+        <p>Votre système Zéro Devis Perdu en production, qui répond à chaque demande en moins de 5 minutes, la qualifie et la relance, livré sous 3 semaines. Sinon, on continue à travailler sans vous facturer un centime de plus jusqu'à ce que ce soit fait.</p>
+        <ul>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>On garantit ce qu'on livre, pas un chiffre d'affaires qu'on ne contrôle pas.</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Audit offert : vous savez ce que vous récupérez avant de signer.</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Option premium : déploiement 100 % sur vos propres serveurs.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section id="fondateur" style="padding-top:0">
+  <div class="wrap founder">
+    <!-- PHOTO : remplacer ce bloc par <img src="assets/alex.jpg" alt="Alexandre Maurel, fondateur de SprintIA" class="portrait"/> -->
+    <div class="portrait reveal" aria-hidden="true">AM</div>
+    <div class="reveal">
+      <span class="tag">Qui est derrière SprintIA</span>
+      <h2>Alexandre Maurel</h2>
+      <p class="role">Fondateur, ingénieur IA</p>
+      <p class="bio">J'ai présidé une structure de conseil étudiante. On perdait des affaires faute de réponse rapide et de suivi. J'y ai automatisé les relances, le suivi commercial et la rédaction des propositions. Je réinstalle ce système chez vous, adapté à votre métier.</p>
+      <ul class="creds">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg><span>Élève-ingénieur en intelligence artificielle, Telecom SudParis</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><span>Président de Sprint Junior Étude (2025-2026), la Junior-Entreprise de l'école</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span>Relances, suivi commercial et propositions automatisés pour sa propre structure</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal"><h2>Vos questions, <span class="hl">nos réponses</span></h2></div>
+    <div class="faq">
+      <details class="card"><summary>L'IA répond-elle à mes clients à ma place ?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Non. L'IA envoie un accusé de réception immédiat et qualifie la demande, mais ne s'engage jamais sur un prix ou un délai technique. Vous validez chaque devis. Vous gardez la main.</p></details>
+      <details class="card"><summary>Mes devis sont techniques et sur-mesure. Ça marche quand même ?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Oui. Le système ne chiffre pas à votre place : il capte la demande, rassure le prospect en moins de 5 minutes et vous transmet toutes les infos pour chiffrer vite. Le travail technique reste le vôtre.</p></details>
+      <details class="card"><summary>C'est compliqué à mettre en place pour mon équipe ?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Non. On installe et paramètre tout en 10 jours ouvrés, branché sur vos outils existants. Votre équipe reçoit simplement des demandes déjà qualifiées. On forme, et pendant 30 jours vous nous écrivez directement pour tout ajustement.</p></details>
+      <details class="card"><summary>Faut-il des compétences techniques en interne ?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Non. On s'occupe de l'installation, du paramétrage et de la maintenance. Votre équipe utilise le système depuis ses outils habituels, avec une formation courte à la mise en service.</p></details>
+      <details class="card"><summary>Où sont hébergées mes données ?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>En France, en conformité RGPD. Une option 100 % on-premise, sur vos propres serveurs, est disponible si vous voulez la maîtrise totale de vos données.</p></details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<section class="final on-navy">
+  <div class="wrap">
+    <h2>Combien de devis avez-vous <span class="hl">perdus ce mois-ci</span> ?</h2>
+    <p>Faites le calcul avec nous. L'audit est offert et vous repartez avec votre chiffre.</p>
+    <button type="button" class="btn btn-primary" data-open-modal>Réserver mon audit gratuit <svg class="icon" aria-hidden="true"><use href="#i-arrow-forward"/></svg></button>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#top"><svg aria-hidden="true"><use href="#i-logo"/></svg><span>Sprint<b>IA</b></span></a>
+        <p>Agence d'automatisation IA pour les PME industrie &amp; sous-traitance.</p>
+      </div>
+      <div>
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#methode">Méthode</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Légal</h3>
+        <ul>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="confidentialite.html">Confidentialité (RGPD)</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal">SprintIA · Micro-entreprise · Baziège (Haute-Garonne) · SIRET 107 725 020 00013</p>
+  </div>
+</footer>
+
+<!-- LEAD MODAL (progressive profiling) -->
+<div id="lead-modal" class="modal modal-hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-backdrop" data-close-modal aria-hidden="true"></div>
+  <div class="modal-panel">
+    <div class="progress"><div id="modal-progress" style="width:25%"></div></div>
+    <div class="modal-top">
+      <button type="button" id="modal-back" class="invisible"><svg class="icon" aria-hidden="true" style="width:18px;height:18px"><use href="#i-arrow-back"/></svg> Retour</button>
+      <span id="modal-step-label" aria-live="polite">Étape 1 / 4</span>
+      <button type="button" data-close-modal aria-label="Fermer"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+    </div>
+    <form id="lead-form">
+      <h2 id="modal-title" class="sr-only">Réserver mon audit gratuit</h2>
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true"/>
+
+      <fieldset class="step active" data-step="1">
+        <legend>Vous êtes ?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="role" value="Dirigeant" required/>Dirigeant</label>
+          <label class="opt"><input type="radio" name="role" value="Responsable commercial"/>Responsable commercial</label>
+          <label class="opt"><input type="radio" name="role" value="Autre"/>Autre</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="step" data-step="2">
+        <legend>Votre activité &amp; taille</legend>
+        <span class="lbl">Secteur</span>
+        <div class="chips" data-chip-group="secteur">
+          <button type="button" aria-pressed="false" class="chip">Métallurgie</button>
+          <button type="button" aria-pressed="false" class="chip">Usinage</button>
+          <button type="button" aria-pressed="false" class="chip">Menuiserie</button>
+          <button type="button" aria-pressed="false" class="chip">BTP</button>
+          <button type="button" aria-pressed="false" class="chip">Autre</button>
+        </div>
+        <span class="lbl">Effectif</span>
+        <div class="chips" data-chip-group="effectif">
+          <button type="button" aria-pressed="false" class="chip">10 à 20</button>
+          <button type="button" aria-pressed="false" class="chip">20 à 35</button>
+          <button type="button" aria-pressed="false" class="chip">35 à 50</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="step" data-step="3">
+        <legend>Combien de devis envoyez-vous par mois ?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="volume" value="< 20"/>Moins de 20</label>
+          <label class="opt"><input type="radio" name="volume" value="20-50"/>Entre 20 et 50</label>
+          <label class="opt"><input type="radio" name="volume" value="50+"/>Plus de 50</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="step" data-step="4">
+        <legend>Où vous envoyer votre audit ?</legend>
+        <p class="hint">On vous recontacte sous 24&nbsp;h.</p>
+        <label for="company" class="lbl">Nom de l'entreprise</label>
+        <input id="company" name="company" type="text" autocomplete="organization" placeholder="Ex : Métallurgie Toulon" class="field"/>
+        <label for="email" class="lbl">Email professionnel</label>
+        <input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="nom@entreprise.fr" required class="field"/>
+        <label for="phone" class="lbl">Téléphone</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="06 12 34 56 78" class="field"/>
+      </fieldset>
+
+      <div class="step" data-step="5" style="text-align:center">
+        <div class="success-ico"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></div>
+        <h3>Parfait, c'est noté.</h3>
+        <p class="hint" style="margin-top:0">On vous recontacte sous 24&nbsp;h avec votre estimation de devis perdus.</p>
+        <button type="button" class="btn btn-dark" data-close-modal>Fermer</button>
+      </div>
+
+      <div id="modal-actions">
+        <button type="button" id="modal-next" class="btn btn-primary">Continuer <svg class="icon" aria-hidden="true"><use href="#i-arrow-forward"/></svg></button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+(function () {
+    "use strict";
+    document.body.classList.remove("no-js");
+    var modal = document.getElementById("lead-modal");
+    var form = document.getElementById("lead-form");
+    var steps = Array.prototype.slice.call(form.querySelectorAll(".step"));
+    var progress = document.getElementById("modal-progress");
+    var stepLabel = document.getElementById("modal-step-label");
+    var backBtn = document.getElementById("modal-back");
+    var nextBtn = document.getElementById("modal-next");
+    var actions = document.getElementById("modal-actions");
+    var totalInput = 4; // 4 étapes de questions + 1 écran de succès
+    var current = 1;
+    var lastFocus = null;
+    var ARROW = '<svg class="icon" aria-hidden="true"><use href="#i-arrow-forward"/></svg>';
+    var CHECK = '<svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>';
+
+    function showStep(n) {
+        current = n;
+        steps.forEach(function (s) {
+            s.classList.toggle("active", parseInt(s.getAttribute("data-step"), 10) === n);
+        });
+        progress.style.width = (Math.min(n, totalInput) / totalInput * 100) + "%";
+        if (n <= totalInput) {
+            stepLabel.textContent = "Étape " + n + " / " + totalInput;
+            stepLabel.style.visibility = "visible";
+            actions.style.display = "";
+            backBtn.classList.toggle("invisible", n === 1);
+            nextBtn.innerHTML = (n === totalInput) ? "Recevoir mon audit " + CHECK : "Continuer " + ARROW;
+        } else {
+            stepLabel.style.visibility = "hidden";
+            progress.style.width = "100%";
+            actions.style.display = "none";
+            backBtn.classList.add("invisible");
+        }
+        var active = form.querySelector(".step.active");
+        var focusable = active.querySelector('input:not([name="botcheck"]), button:not(.chip)');
+        if (focusable) { try { focusable.focus(); } catch (e) {} }
+    }
+
+    function validateStep(n) {
+        var active = form.querySelector('.step[data-step="' + n + '"]');
+        var radios = active.querySelectorAll('input[type="radio"]');
+        if (radios.length && !form.querySelector('input[name="' + radios[0].name + '"]:checked')) { return "Merci de choisir une option."; }
+        var email = active.querySelector('input[type="email"]');
+        if (email && !email.checkValidity()) { email.reportValidity(); return false; }
+        return true;
+    }
+
+    function openModal() {
+        lastFocus = document.activeElement;
+        modal.classList.remove("modal-hidden");
+        document.body.style.overflow = "hidden";
+        showStep(1);
+    }
+    function closeModal() {
+        modal.classList.add("modal-hidden");
+        document.body.style.overflow = "";
+        if (lastFocus && lastFocus.focus) { lastFocus.focus(); }
+        setTimeout(function () {
+            form.reset();
+            form.querySelectorAll(".chip.selected").forEach(function (c) { c.classList.remove("selected"); c.setAttribute("aria-pressed", "false"); });
+            showStep(1);
+        }, 250);
+    }
+
+    document.querySelectorAll("[data-open-modal]").forEach(function (b) { b.addEventListener("click", openModal); });
+    document.querySelectorAll("[data-close-modal]").forEach(function (b) { b.addEventListener("click", closeModal); });
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && !modal.classList.contains("modal-hidden")) { closeModal(); }
+    });
+
+    // === Capture des leads (Web3Forms) ===
+    // Clé d'accès Web3Forms (publique par design, routée vers l'email du compte).
+    var WEB3FORMS_ACCESS_KEY = "f2fc9509-5e37-4474-a531-bf57161548cf";
+
+    function collectPayload() {
+        var data = { access_key: WEB3FORMS_ACCESS_KEY, subject: "Nouveau lead : audit SprintIA", from_name: "Site SprintIA" };
+        new FormData(form).forEach(function (v, k) { data[k] = v; });
+        form.querySelectorAll("[data-chip-group]").forEach(function (group) {
+            var sel = group.querySelector(".chip.selected");
+            data[group.getAttribute("data-chip-group")] = sel ? sel.textContent.trim() : "";
+        });
+        return data;
+    }
+
+    function submitLead() {
+        return fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: { "Content-Type": "application/json", "Accept": "application/json" },
+            body: JSON.stringify(collectPayload())
+        }).then(function (r) { return r.json(); }).then(function (j) {
+            if (!j.success) { throw new Error("web3forms"); }
+        });
+    }
+
+    nextBtn.addEventListener("click", function () {
+        var ok = validateStep(current);
+        if (ok !== true) { if (typeof ok === "string") { stepLabel.textContent = ok; } return; }
+        if (current < totalInput) { showStep(current + 1); return; }
+        nextBtn.disabled = true;
+        nextBtn.textContent = "Envoi…";
+        submitLead().then(function () {
+            nextBtn.disabled = false;
+            showStep(totalInput + 1);
+        })["catch"](function () {
+            // Échec réseau/API : pas de faux succès, on propose de réessayer.
+            nextBtn.disabled = false;
+            nextBtn.innerHTML = "Réessayer " + ARROW;
+            stepLabel.textContent = "Échec de l'envoi, réessayez dans un instant.";
+        });
+    });
+    backBtn.addEventListener("click", function () { if (current > 1) { showStep(current - 1); } });
+
+    form.querySelectorAll("[data-chip-group]").forEach(function (group) {
+        group.querySelectorAll(".chip").forEach(function (chip) {
+            chip.addEventListener("click", function () {
+                group.querySelectorAll(".chip").forEach(function (c) { c.classList.remove("selected"); c.setAttribute("aria-pressed", "false"); });
+                chip.classList.add("selected");
+                chip.setAttribute("aria-pressed", "true");
+            });
+        });
+    });
+
+    modal.addEventListener("keydown", function (e) {
+        if (e.key !== "Tab" || modal.classList.contains("modal-hidden")) { return; }
+        var f = modal.querySelectorAll('a[href], button:not([disabled]), input, [tabindex]:not([tabindex="-1"])');
+        var visible = Array.prototype.filter.call(f, function (el) { return el.offsetParent !== null; });
+        if (!visible.length) { return; }
+        var first = visible[0], last = visible[visible.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
+
+    // mobile menu
+    var burger = document.getElementById("burger");
+    var mobileMenu = document.getElementById("mobile-menu");
+    var burgerOpen = document.getElementById("burger-open-icon");
+    var burgerClose = document.getElementById("burger-close-icon");
+    function setBurger(open) {
+        burger.setAttribute("aria-expanded", String(open));
+        burgerOpen.classList.toggle("hidden", open);
+        burgerClose.classList.toggle("hidden", !open);
+    }
+    burger.addEventListener("click", function () { setBurger(mobileMenu.classList.toggle("hidden") === false); });
+    mobileMenu.querySelectorAll("a").forEach(function (el) {
+        el.addEventListener("click", function () { mobileMenu.classList.add("hidden"); setBurger(false); });
+    });
+
+    // reveal on scroll
+    var els = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+        }, { rootMargin: "0px 0px -8% 0px" });
+        els.forEach(function (el) { io.observe(el); });
+    } else {
+        els.forEach(function (el) { el.classList.add("in"); });
+    }
+})();
+</script>
+</body>
+</html>
