@@ -275,6 +275,7 @@ section { padding: var(--space-3xl) 0; }
 .founder { display: grid; gap: var(--space-2xl); grid-template-columns: minmax(0, 1fr); align-items: center; }
 @media (min-width: 900px) { .founder { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: var(--space-3xl); } }
 .portrait { aspect-ratio: 4 / 5; max-width: 380px; width: 100%; margin: 0 auto; border-radius: var(--radius-lg); background: var(--color-navy); color: var(--color-accent); display: grid; place-items: center; font-size: 5rem; font-weight: 700; letter-spacing: -0.04em; position: relative; overflow: hidden; }
+img.portrait { object-fit: cover; object-position: center top; }
 .portrait::after { content: ""; position: absolute; inset: auto -20% -30% auto; width: 70%; aspect-ratio: 1; border-radius: 50%; border: 18px solid var(--color-navy-2); }
 .founder h2 { font-size: var(--text-2xl); font-weight: 700; }
 .founder .role { margin-top: var(--space-xs); font-weight: 600; color: var(--color-accent-ink); }
@@ -597,8 +598,7 @@ footer { background: var(--color-navy); color: var(--color-on-navy-muted); borde
 <!-- FOUNDER -->
 <section id="fondateur" style="padding-top:0">
   <div class="wrap founder">
-    <!-- PHOTO : remplacer ce bloc par <img src="assets/alex.jpg" alt="Alexandre Maurel, fondateur de SprintIA" class="portrait"/> -->
-    <div class="portrait reveal" aria-hidden="true">AM</div>
+    <img src="assets/alex.jpg" alt="Alexandre Maurel, fondateur de SprintIA" class="portrait reveal" width="800" height="953" loading="lazy"/>
     <div class="reveal">
       <span class="tag">Qui est derrière SprintIA</span>
       <h2>Alexandre Maurel</h2>
